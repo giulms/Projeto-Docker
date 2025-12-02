@@ -1,26 +1,5 @@
 # 🐳 Projeto Docker - Desafios de Containers
 
-> Projeto da disciplina de **Fundamentos de Computação Concorrente, Paralela e Distribuída**  
-> Universidade: [Sua Universidade]  
-> Curso: [Seu Curso]  
-> Autor: Giulliano Muniz
-
----
-## 📖 Sobre o Projeto
-
-Este projeto contém **3 desafios progressivos** para aprender Docker, desde containers simples até aplicações multi-container orquestradas com Docker Compose. Cada desafio foi desenvolvido seguindo as melhores práticas de containerização.
-
-### 🎯 Objetivos do Projeto
-
-- ✅ Compreender os conceitos fundamentais de containerização
-- ✅ Dominar a criação de imagens Docker com Dockerfile
-- ✅ Aprender mapeamento de portas e redes Docker
-- ✅ Implementar aplicações web containerizadas
-- ✅ Orquestrar múltiplos containers com Docker Compose
-- ✅ Aplicar boas práticas de desenvolvimento com containers
-
----
-
 ## 🛠️ Tecnologias Utilizadas
 
 <div align="left">
@@ -568,44 +547,6 @@ python testar.py
 
 ---
 
-## 📚 Conceitos Aprendidos
-
-### Desafio 1: Fundamentos
-- ✅ **Dockerfile básico:** FROM, WORKDIR, COPY, RUN, CMD
-- ✅ **Build de imagens:** `docker build`
-- ✅ **Execução de containers:** `docker run`
-- ✅ **Imagens base:** python:3.11-slim
-- ✅ **Containers efêmeros:** containers que executam e finalizam
-
-### Desafio 2: Aplicações Web
-- ✅ **Port Mapping:** `-p host:container`
-- ✅ **Modo detached:** `-d` para background
-- ✅ **Nomeação de containers:** `--name`
-- ✅ **Gerenciamento de logs:** `docker logs`
-- ✅ **.dockerignore:** otimização de build
-- ✅ **Comandos exec:** `docker exec -it`
-- ✅ **Ciclo de vida:** start, stop, restart, rm
-
-### Desafio 3: Orquestração
-- ✅ **Docker Compose:** arquivo YAML declarativo
-- ✅ **Multi-container:** orquestração de múltiplos serviços
-- ✅ **Redes Docker:** comunicação entre containers
-- ✅ **Depends_on:** ordem de inicialização
-- ✅ **Restart policies:** `unless-stopped`
-- ✅ **Health checks:** monitoramento de serviços
-- ✅ **Volumes:** persistência de dados (conceito)
-- ✅ **Scaling:** escalar serviços horizontalmente
-
-### Conceitos Avançados Aplicados
-- ✅ **Arquitetura de Microserviços:** separação de responsabilidades
-- ✅ **API RESTful:** padrões HTTP, CRUD completo
-- ✅ **Separation of Concerns:** frontend/backend separados
-- ✅ **Container Networking:** bridge networks, DNS interno
-- ✅ **Desenvolvimento orientado a containers:** 12-factor app principles
-- ✅ **Isolamento:** cada serviço em seu próprio ambiente
-
----
-
 ## 🐛 Troubleshooting
 
 ### Porta já em uso
@@ -679,49 +620,6 @@ docker system prune -a --volumes
 
 ---
 
-## 📊 Comparação dos Desafios
-
-| Aspecto | Desafio 1 | Desafio 2 | Desafio 3 |
-|---------|-----------|-----------|-----------|
-| **Complexidade** | ⭐ Básico | ⭐⭐ Intermediário | ⭐⭐⭐ Avançado |
-| **Containers** | 1 | 1 | 2 |
-| **Portas** | Nenhuma | 5000 | 5000, 5001 |
-| **Rede** | Não usa | Bridge padrão | Bridge customizada |
-| **Dependências** | Nenhuma | Flask | Flask (2x) |
-| **Orquestração** | Não | Não | Docker Compose |
-| **API REST** | Não | Parcial | Completa (CRUD) |
-| **Banco de Dados** | Não | Não | Em memória |
-| **Health Checks** | Não | Não | Sim |
-| **Microserviços** | Não | Não | Sim |
-
----
-
-## 📖 Recursos Adicionais
-
-### Documentação Oficial
-- [Docker Documentation](https://docs.docker.com/)
-- [Docker Hub](https://hub.docker.com/)
-- [Docker Compose Documentation](https://docs.docker.com/compose/)
-- [Python Docker Official Image](https://hub.docker.com/_/python)
-- [Flask Documentation](https://flask.palletsprojects.com/)
-
-### Tutoriais e Guias
-- [Docker Get Started Guide](https://docs.docker.com/get-started/)
-- [Best Practices for Writing Dockerfiles](https://docs.docker.com/develop/dev-best-practices/)
-- [Docker Networking](https://docs.docker.com/network/)
-- [Docker Compose Best Practices](https://docs.docker.com/compose/production/)
-
-### Livros Recomendados
-- "Docker Deep Dive" - Nigel Poulton
-- "Docker in Action" - Jeff Nickoloff
-- "Kubernetes in Action" - Marko Luksa (próximo passo)
-
-### Cursos Online
-- [Docker Mastery (Udemy)](https://www.udemy.com/course/docker-mastery/)
-- [Docker for Developers (Pluralsight)](https://www.pluralsight.com/courses/docker-developers)
-
----
-
 ## 🤝 Contribuindo
 
 Sugestões e melhorias são bem-vindas! Sinta-se à vontade para:
@@ -734,26 +632,12 @@ Sugestões e melhorias são bem-vindas! Sinta-se à vontade para:
 
 ---
 
-## 📝 Licença
-
-Este projeto foi desenvolvido para fins educacionais como parte da disciplina de Fundamentos de Computação Concorrente, Paralela e Distribuída.
-
----
-
 ## 👨‍💻 Autor
 
 **Giulliano Muniz**
 
 - GitHub: [@giulms](https://github.com/giulms)
 - Projeto: [Projeto-Docker](https://github.com/giulms/Projeto-Docker)
-
----
-
-## 🎓 Agradecimentos
-
-- Professor(a): [Nome do Professor]
-- Universidade: [Nome da Universidade]
-- Disciplina: Fundamentos de Computação Concorrente, Paralela e Distribuída
 
 ---
 
