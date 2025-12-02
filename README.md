@@ -27,57 +27,57 @@ Projeto-Docker/
 ├── 📂 desafio1/                          # Container Python simples
 │   ├── app.py                            # Aplicação Python
 │   ├── requirements.txt                  # Dependências
-│   ├── Dockerzada.txt                    # Instruções Docker
+│   ├── Dockerfile                        # Instruções Docker
 │   └── README.md                         # Documentação completa
 │
 ├── 📂 desafio2/                          # Aplicação web Flask
 │   ├── app.py                            # Servidor Flask
 │   ├── requirements.txt                  # Dependências
-│   ├── Dockerzada.txt                    # Instruções Docker
+│   ├── Dockerfile                        # Instruções Docker
 │   └── README.md                         # Documentação completa
 │
 ├── 📂 desafio3/                          # Sistema multi-container
-│   ├── composezada.yml                   # Orquestração Docker Compose
+│   ├── docker-compose.yml                # Orquestração Docker Compose
 │   ├── README.md                         # Documentação completa
 │   │
 │   ├── 📂 frontend/                      # Serviço de documentação
 │   │   ├── app.py                        # Interface web
 │   │   ├── requirements.txt              # Dependências
-│   │   └── Dockerzada.txt                # Instruções Docker
+│   │   └── Dockerfile                    # Instruções Docker
 │   │
 │   └── 📂 backend/                       # API REST
 │       ├── app.py                        # API CRUD
 │       ├── requirements.txt              # Dependências
-│       └── Dockerzada.txt                # Instruções Docker
+│       └── Dockerfile                    # Instruções Docker
 │
 ├── 📂 desafio4/                          # Comunicação entre microserviços
-│   ├── composezada.yml                   # Orquestração
+│   ├── docker-compose.yml                # Orquestração
 │   ├── README.md                         # Documentação completa
 │   │
 │   ├── 📂 service1/                      # Provedor de dados
 │   │   ├── app.py                        # Microserviço de usuários
-│   │   └── Dockerzada.txt                # Instruções Docker
+│   │   └── Dockerfile                    # Instruções Docker
 │   │
 │   └── 📂 service2/                      # Consumidor de dados
 │       ├── app.py                        # Microserviço consumidor
-│       └── Dockerzada.txt                # Instruções Docker
+│       └── Dockerfile                    # Instruções Docker
 │
 └── 📂 desafio5/                          # API Gateway
-    ├── composezada.yml                   # Orquestração
+    ├── docker-compose.yml                # Orquestração
     ├── README.md                         # Documentação completa
     │
     ├── 📂 gateway-service/               # Gateway central
     │   ├── app.py                        # Roteador de requisições
     │   ├── requirements.txt              # Dependências
-    │   └── Dockerzada.txt                # Instruções Docker
+    │   └── Dockerfile                    # Instruções Docker
     │
     ├── 📂 users-service/                 # Backend de usuários
     │   ├── app.py                        # API de usuários
-    │   └── Dockerzada.txt                # Instruções Docker
+    │   └── Dockerfile                    # Instruções Docker
     │
     └── 📂 orders-service/                # Backend de pedidos
         ├── app.py                        # API de pedidos
-        └── Dockerzada.txt                # Instruções Docker
+        └── Dockerfile                    # Instruções Docker
 ```
 
 ---
