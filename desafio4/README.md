@@ -315,7 +315,7 @@ curl http://localhost:8081/combined-data
 
 ---
 
-## 📚 Conceitos Aprendidos
+## 💡 Dicas e Boas Práticas
 
 ### 1. Comunicação Entre Containers
 
@@ -472,16 +472,6 @@ services:
 ```python
 time.sleep(5)  # Espera 5 segundos
 ```
-
----
-
-## 🎯 Próximos Passos
-
-1. **[Desafio 5](../desafio5/README.md)** - API Gateway com múltiplos microserviços
-2. Experimentar com:
-   - Adicionar mais microserviços
-   - Implementar autenticação entre serviços
-   - Adicionar circuit breakers
 
 ---
 

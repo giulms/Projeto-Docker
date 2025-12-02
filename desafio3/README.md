@@ -591,7 +591,7 @@ python testar.py
 
 ---
 
-## 📚 Conceitos Aprendidos
+## 🐛 Problemas Comuns
 
 ### 1. Docker Compose
 
@@ -769,7 +769,7 @@ command: ["./wait-for-it.sh", "backend:5001", "--", "python", "app.py"]
 
 ---
 
-## 🎯 Próximos Passos
+## 📖 Documentação Adicional
 
 Após completar este desafio, você pode:
 

@@ -525,7 +525,7 @@ curl http://localhost/users
 
 ---
 
-## 📚 Conceitos Aprendidos
+## 💡 Padrões Avançados de API Gateway
 
 ### 1. API Gateway Pattern
 
@@ -785,29 +785,6 @@ response = requests.request(
 # Aumentar timeout
 response = requests.get(url, timeout=30)  # 30 segundos
 ```
-
----
-
-## 🎯 Próximos Passos e Melhorias
-
-### Nível Intermediário
-- [ ] Adicionar autenticação JWT no Gateway
-- [ ] Implementar rate limiting por endpoint
-- [ ] Adicionar logging estruturado (JSON logs)
-- [ ] Implementar CORS adequadamente
-
-### Nível Avançado
-- [ ] Circuit breaker para resiliência
-- [ ] Service mesh com Istio
-- [ ] Tracing distribuído com Jaeger
-- [ ] Métricas com Prometheus + Grafana
-- [ ] Load balancing entre réplicas
-
-### Nível Especialista
-- [ ] API versioning (v1, v2)
-- [ ] GraphQL Gateway
-- [ ] WebSocket support
-- [ ] gRPC backend communication
 
 ---
 

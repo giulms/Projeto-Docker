@@ -129,46 +129,6 @@ docker container prune
 
 ---
 
-## 📚 Conceitos Aprendidos
-
-### 1. Dockerfile
-- Arquivo de configuração para construir imagens Docker
-- Instruções sequenciais para montar o ambiente
-
-### 2. Imagens vs Containers
-- **Imagem:** Template estático (receita)
-- **Container:** Instância em execução (prato pronto)
-
-### 3. Comandos Básicos
-
-| Comando | Descrição |
-|---------|-----------|
-| `docker build` | Constrói uma imagem a partir do Dockerfile |
-| `docker run` | Cria e executa um container |
-| `docker images` | Lista imagens disponíveis |
-| `docker ps` | Lista containers em execução |
-| `docker ps -a` | Lista todos os containers |
-
-### 4. Camadas de Imagem
-- Cada instrução no Dockerfile cria uma camada
-- Camadas são cacheadas para builds mais rápidos
-
-### 5. Container Lifecycle
-```
-Criado → Executando → Parado → Removido
-```
-
----
-
-## 🎯 Próximos Passos
-
-Após completar este desafio, você está pronto para:
-
-1. **[Desafio 2](../desafio2/README.md)** - Aplicações web com mapeamento de portas
-2. **[Desafio 3](../desafio3/README.md)** - Sistemas multi-container com Docker Compose
-
----
-
 ## 💡 Dicas e Boas Práticas
 
 - ✅ Use imagens `slim` ou `alpine` quando possível

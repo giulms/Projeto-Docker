@@ -199,7 +199,7 @@ python testar.py
 
 ---
 
-## 📚 Conceitos Aprendidos
+## 🐛 Problemas Comuns
 
 ### 1. Port Mapping
 
@@ -345,18 +345,6 @@ pip install -r requirements.txt
 ```python
 app.run(host='0.0.0.0', port=5000)
 ```
-
----
-
-## 🎯 Próximos Passos
-
-Após completar este desafio, você está pronto para:
-
-1. **[Desafio 3](../desafio3/README.md)** - Sistemas multi-container com Docker Compose
-2. Experimentar com:
-   - Variáveis de ambiente (`-e`)
-   - Volumes para persistência (`-v`)
-   - Múltiplas instâncias do mesmo serviço
 
 ---
 
