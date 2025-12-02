@@ -6,23 +6,6 @@
 > Autor: Giulliano Muniz
 
 ---
-
-## 📑 Índice
-
-- [Sobre o Projeto](#-sobre-o-projeto)
-- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
-- [Estrutura do Projeto](#-estrutura-do-projeto)
-- [Desafios](#-desafios)
-  - [Desafio 1 - Container Python Simples](#desafio-1---container-python-simples)
-  - [Desafio 2 - Aplicação Web Flask](#desafio-2---aplicação-web-flask)
-  - [Desafio 3 - Sistema Multi-Container](#desafio-3---sistema-multi-container)
-- [Pré-requisitos](#-pré-requisitos)
-- [Como Executar](#-como-executar)
-- [Conceitos Aprendidos](#-conceitos-aprendidos)
-- [Recursos Adicionais](#-recursos-adicionais)
-
----
-
 ## 📖 Sobre o Projeto
 
 Este projeto contém **3 desafios progressivos** para aprender Docker, desde containers simples até aplicações multi-container orquestradas com Docker Compose. Cada desafio foi desenvolvido seguindo as melhores práticas de containerização.
