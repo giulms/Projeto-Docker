@@ -1,0 +1,206 @@
+# Desafio 1 - Container Python Simples 🐍
+
+## 📖 Descrição da Solução
+
+Este desafio implementa um container Docker básico que executa uma aplicação Python simples. A aplicação exibe mensagens de boas-vindas formatadas no terminal e então finaliza sua execução.
+
+---
+
+## 🏗️ Arquitetura e Decisões Técnicas
+
+### Diagrama de Arquitetura
+
+```
+┌─────────────────────────────┐
+│     Imagem Base             │
+│   python:3.11-slim          │
+└──────────┬──────────────────┘
+           │
+           ▼
+┌─────────────────────────────┐
+│   Aplicação Python          │
+│   - app.py                  │
+│   - Sem dependências ext.   │
+└──────────┬──────────────────┘
+           │
+           ▼
+┌─────────────────────────────┐
+│   Container em Execução     │
+│   - Exibe mensagens         │
+│   - Finaliza após execução  │
+└─────────────────────────────┘
+```
+
+### Decisões Técnicas
+
+| Decisão | Justificativa |
+|---------|---------------|
+| **Imagem `python:3.11-slim`** | Versão reduzida do Python, economiza ~700MB comparado à imagem completa |
+| **Sem dependências externas** | Mantém o projeto simples e focado nos fundamentos do Docker |
+| **Container efêmero** | Executa uma tarefa e finaliza, demonstrando o ciclo de vida básico |
+
+---
+
+## 🔍 Explicação Detalhada do Funcionamento
+
+### Containers Envolvidos
+
+- **1 container Python** executando `app.py`
+
+### Rede
+
+- **Não requer configuração de rede** (execução local isolada)
+
+### Microserviços
+
+- **Aplicação standalone** sem comunicação externa
+
+### Fluxos de Dados
+
+```
+Usuário executa comando
+        ↓
+docker run desafio1-python
+        ↓
+Container inicia
+        ↓
+Python executa app.py
+        ↓
+Mensagens exibidas no terminal
+        ↓
+Container finaliza automaticamente
+```
+
+### Estrutura do Dockerfile
+
+```dockerfile
+FROM python:3.11-slim          # Imagem base leve
+WORKDIR /app                    # Define diretório de trabalho
+COPY requirements.txt .         # Copia arquivo de dependências
+RUN pip install --no-cache-dir -r requirements.txt  # Instala dependências
+COPY app.py .                   # Copia código da aplicação
+CMD ["python", "app.py"]        # Comando para executar ao iniciar
+```
+
+---
+
+## 🚀 Instruções de Execução
+
+### Executar com Docker
+
+```bash
+# 1. Navegar até a pasta do desafio
+cd desafio1
+
+# 2. Construir a imagem Docker
+docker build -t desafio1-python .
+
+# 3. Executar o container
+docker run desafio1-python
+```
+
+**Saída esperada:**
+```
+==================================================
+Bem-vindo ao Desafio 1 - Docker com Python!
+==================================================
+
+📦 Esta aplicação está rodando em um container Docker
+🐍 Desenvolvido com Python
+
+Desafio concluído com sucesso! ✅
+```
+
+### Comandos Úteis
+
+```bash
+# Listar imagens criadas
+docker images
+
+# Listar containers (incluindo finalizados)
+docker ps -a
+
+# Remover a imagem
+docker rmi desafio1-python
+
+# Remover containers antigos
+docker container prune
+```
+
+---
+
+## 📚 Conceitos Aprendidos
+
+### 1. Dockerfile
+- Arquivo de configuração para construir imagens Docker
+- Instruções sequenciais para montar o ambiente
+
+### 2. Imagens vs Containers
+- **Imagem:** Template estático (receita)
+- **Container:** Instância em execução (prato pronto)
+
+### 3. Comandos Básicos
+
+| Comando | Descrição |
+|---------|-----------|
+| `docker build` | Constrói uma imagem a partir do Dockerfile |
+| `docker run` | Cria e executa um container |
+| `docker images` | Lista imagens disponíveis |
+| `docker ps` | Lista containers em execução |
+| `docker ps -a` | Lista todos os containers |
+
+### 4. Camadas de Imagem
+- Cada instrução no Dockerfile cria uma camada
+- Camadas são cacheadas para builds mais rápidos
+
+### 5. Container Lifecycle
+```
+Criado → Executando → Parado → Removido
+```
+
+---
+
+## 🎯 Próximos Passos
+
+Após completar este desafio, você está pronto para:
+
+1. **[Desafio 2](../desafio2/README.md)** - Aplicações web com mapeamento de portas
+2. **[Desafio 3](../desafio3/README.md)** - Sistemas multi-container com Docker Compose
+
+---
+
+## 💡 Dicas e Boas Práticas
+
+- ✅ Use imagens `slim` ou `alpine` quando possível
+- ✅ Sempre especifique a versão da imagem base
+- ✅ Agrupe comandos `RUN` para reduzir camadas
+- ✅ Use `.dockerignore` para excluir arquivos desnecessários
+- ✅ Teste localmente antes de containerizar
+
+---
+
+## 🆘 Problemas Comuns
+
+### Erro: "docker: command not found"
+**Solução:** Instale o Docker Desktop e verifique com `docker --version`
+
+### Erro: "Cannot connect to the Docker daemon"
+**Solução:** Certifique-se de que o Docker Desktop está rodando
+
+### Erro: "Image build failed"
+**Solução:** Verifique se o Dockerfile está na pasta correta e sem erros de sintaxe
+
+---
+
+## 📖 Documentação Adicional
+
+- [Documentação Oficial do Docker](https://docs.docker.com/)
+- [Python Docker Official Images](https://hub.docker.com/_/python)
+
+---
+
+<div align="center">
+
+**[⬅️ Voltar ao Índice Principal](../README.md)** | **[Próximo Desafio ➡️](../desafio2/README.md)**
+
+</div>
