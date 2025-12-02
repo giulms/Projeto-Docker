@@ -1,0 +1,38 @@
+services:
+  users-service:
+    build: 
+      context: ./users-service
+    container_name: ms_users
+    networks:
+      - gateway-network
+    restart: always
+
+  orders-service:
+    build:
+      context: ./orders-service
+    container_name: ms_orders
+    networks:
+      - gateway-network
+    restart: always
+
+  gateway-service:
+    build:
+      context: ./gateway-service
+    container_name: api_gateway
+    environment:
+      USERS_SERVICE_URL: http://users-service:5000
+      ORDERS_SERVICE_URL: http://orders-service:5001
+    ports:
+      - "80:8000" 
+    depends_on:
+      users-service:
+        condition: service_started
+      orders-service:
+        condition: service_started
+    networks:
+      - gateway-network
+    restart: always
+
+networks:
+  gateway-network:
+    driver: bridge

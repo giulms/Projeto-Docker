@@ -1,0 +1,31 @@
+services:
+  service-a:
+    build: 
+      context: ./service1 
+      dockerfile: Dockerfile
+    container_name: microservice1
+    ports:
+      - "8080:5000" 
+    networks:
+      - microservice-network
+    restart: always
+
+  service-b:
+    build:
+      context: ./service2
+      dockerfile: Dockerfile
+    container_name: microservice2
+    ports:
+      - "8081:5001" 
+    environment:
+      SERVICE_A_URL: http://service-a:5000/users
+    depends_on:
+      service-a:
+        condition: service_started
+    networks:
+      - microservice-network
+    restart: always
+
+networks:
+  microservice-network:
+    driver: bridge
